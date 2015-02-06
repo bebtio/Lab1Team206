@@ -1,11 +1,12 @@
 /*
-* File:   leds.c
-* Author: 
-*
-* Created on December 27, 2014, 1:31 PM
-*/
+ *
+ *  File:         led.c
+ *  Date:         5Feb2015
+ *  Authors:      Allberto Heras, Timothy Luensman, Tommy May, Xinran Fang
+ *
+ */
 
-#include "p24fj64ga002.h"
+#include "p24FJ64GA002.h"
 #include "leds.h"
 
 

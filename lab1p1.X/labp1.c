@@ -1,13 +1,13 @@
 // ******************************************************************************************* //
 //
 // File:         lab1p1.c
-// Date:         
-// Authors:      
+// Date:         5Feb2015
+// Authors:      Allberto Heras, Timothy Luensman, Tommy May, Xinran Fang
 //
 // Description: Part 1 for lab 1
 // ******************************************************************************************* //
 
-#include "p24fj64ga002.h"
+#include "p24FJ64GA002.h"
 #include "leds.h"
 #include "timer.c"
 #include <stdio.h>

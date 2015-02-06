@@ -1,16 +1,15 @@
 /*
  *
- *  File:         leds.h
+ *  File:         shared.h
  *  Date:         5Feb2015
  *  Authors:      Allberto Heras, Timothy Luensman, Tommy May, Xinran Fang
  *
  */
 
-#ifndef LEDS_H
-#define	LEDS_H
+#ifndef SHARED_H
+#define	SHARED_H
 
-void initLEDs();
-void initSW2();
 
-#endif	/* LEDS_H */
+
+#endif	/* SHARED_H */
 

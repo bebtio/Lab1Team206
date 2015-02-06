@@ -1,14 +1,13 @@
 /*
- * File:   timer.c
- * Authors:
  *
- * Created on December 30, 2014, 8:07 PM
+ *  File:         timer.c
+ *  Date:         5Feb2015
+ *  Authors:      Allberto Heras, Timothy Luensman, Tommy May, Xinran Fang
+ * 
  */
 
-#include "p24fj64ga002.h"
+#include "p24FJ64GA002.h"
 #include "timer.h"
 
 //Uses timer 2
-void delayUs(unsigned int delay){
-    //TODO: Create a delay using timer 2 for "delay" microseconds.
-}
+void delayMicroSeconds(unsigned int delay);
