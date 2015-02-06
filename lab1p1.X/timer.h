@@ -9,7 +9,9 @@
 #ifndef INITTIMER_H
 #define	INITTIMER_H
 
-void delayMicroSeconds(unsigned int delay);
+void delayUs(unsigned int delay);
+void initTimer1();
+void initTimer2();
 
 #endif	/* INITTIMER_H */
 

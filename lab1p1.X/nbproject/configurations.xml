@@ -6,8 +6,8 @@
                    projectFiles="true">
       <itemPath>leds.h</itemPath>
       <itemPath>timer.h</itemPath>
-      <itemPath>/Applications/microchip/xc16/v1.23/support/PIC24F/h/p24FJ64GB002.h</itemPath>
       <itemPath>shared.h</itemPath>
+      <itemPath>/Applications/microchip/xc16/v1.23/support/PIC24F/h/p24FJ64GA002.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

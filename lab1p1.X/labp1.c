@@ -9,7 +9,7 @@
 
 #include "p24FJ64GA002.h"
 #include "leds.h"
-#include "timer.c"
+#include "timer.h"
 #include <stdio.h>
 
 
@@ -24,17 +24,24 @@ _CONFIG2( IESO_OFF & SOSCSEL_SOSC & WUTSEL_LEG & FNOSC_PRIPLL & FCKSM_CSDCMD & O
 int main(void)
 {
 
-    
+
+    int nextState = 0;
     while(1)
     {
         //TODO: Using a finite-state machine, define the behavior of the LEDs
         //Debounce the switch
+        switch(nextState)
+                case 1: break;
     }
     
     return 0;
 }
 
+/*********************************************************************************************/
+
 void _ISR _CNInterrupt(void){
     //TODO: Implement the interrupt to capture the press of the button
 
 }
+
+/*********************************************************************************************/
