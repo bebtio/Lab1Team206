@@ -1,4 +1,6 @@
 build/default/production/labp1.o:  \
 labp1.c  \
 leds.h  \
-timer.h 
+timer.h  \
+shared.h  \
+ states.h 

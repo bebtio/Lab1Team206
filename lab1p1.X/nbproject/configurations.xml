@@ -8,6 +8,7 @@
       <itemPath>timer.h</itemPath>
       <itemPath>shared.h</itemPath>
       <itemPath>/Applications/microchip/xc16/v1.23/support/PIC24F/h/p24FJ64GA002.h</itemPath>
+      <itemPath>states.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,6 +20,8 @@
       <itemPath>labp1.c</itemPath>
       <itemPath>leds.c</itemPath>
       <itemPath>timer.c</itemPath>
+      <itemPath>states.c</itemPath>
+      <itemPath>shared.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

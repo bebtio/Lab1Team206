@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=labp1.c leds.c timer.c
+SOURCEFILES_QUOTED_IF_SPACED=labp1.c leds.c timer.c states.c shared.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/labp1.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/timer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/labp1.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/timer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/labp1.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/states.o ${OBJECTDIR}/shared.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/labp1.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/timer.o.d ${OBJECTDIR}/states.o.d ${OBJECTDIR}/shared.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/labp1.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/timer.o
+OBJECTFILES=${OBJECTDIR}/labp1.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/states.o ${OBJECTDIR}/shared.o
 
 # Source Files
-SOURCEFILES=labp1.c leds.c timer.c
+SOURCEFILES=labp1.c leds.c timer.c states.c shared.c
 
 
 CFLAGS=
@@ -103,6 +103,20 @@ ${OBJECTDIR}/timer.o: timer.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  timer.c  -o ${OBJECTDIR}/timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/timer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/states.o: states.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/states.o.d 
+	@${RM} ${OBJECTDIR}/states.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  states.c  -o ${OBJECTDIR}/states.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/states.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/states.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/shared.o: shared.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/shared.o.d 
+	@${RM} ${OBJECTDIR}/shared.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  shared.c  -o ${OBJECTDIR}/shared.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/shared.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/shared.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/labp1.o: labp1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -124,6 +138,20 @@ ${OBJECTDIR}/timer.o: timer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/timer.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  timer.c  -o ${OBJECTDIR}/timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/timer.o.d"        -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/states.o: states.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/states.o.d 
+	@${RM} ${OBJECTDIR}/states.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  states.c  -o ${OBJECTDIR}/states.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/states.o.d"        -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/states.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/shared.o: shared.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/shared.o.d 
+	@${RM} ${OBJECTDIR}/shared.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  shared.c  -o ${OBJECTDIR}/shared.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/shared.o.d"        -g -omf=elf -O0 -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/shared.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

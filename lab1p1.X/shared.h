@@ -16,12 +16,12 @@
 #define stopLED LATBbits.LATB1
 
 // Define ON and OFF
-#define ON   0;
-#define OFF  1;
+#define ON   0
+#define OFF  1
 
 // Define flag interrupt settings
-#define DOWN 0;
-#define UP   1;
+#define DOWN 0
+#define UP   1
 
 /*********************************************************************************************/
 
@@ -29,12 +29,18 @@
 typedef enum stateTypeEnum{
 
     // Define states by name
-    runLEDState
-
+    run_led_state = 1,
+    stop_led_state,
+    debounce_press_state,
+    debounce_release_state
 
 } stateType;
 
 /*********************************************************************************************/
+
+extern volatile stateType nextState;
+extern volatile stateType currentState;
+
 
 #endif	/* SHARED_H */
 

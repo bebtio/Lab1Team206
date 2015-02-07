@@ -10,7 +10,10 @@
 #include "p24FJ64GA002.h"
 #include "leds.h"
 #include "timer.h"
+#include "shared.h"
 #include <stdio.h>
+#include "states.h"
+
 
 
 _CONFIG1( JTAGEN_OFF & GCP_OFF & GWRP_OFF & BKBUG_ON & COE_OFF & ICS_PGx1 &
@@ -25,13 +28,18 @@ int main(void)
 {
 
 
-    int nextState = 0;
+    nextState = run_led_state;
     while(1)
     {
         //TODO: Using a finite-state machine, define the behavior of the LEDs
         //Debounce the switch
         switch(nextState)
-                case 1: break;
+        {
+                case run_led_state: runLedState(); break;
+                case stop_led_state: stopLedState();break;
+                case debounce_press_state: debouncePressState(); break;
+                case debounce_release_state: debounceReleaseState(); break;
+        }
     }
     
     return 0;

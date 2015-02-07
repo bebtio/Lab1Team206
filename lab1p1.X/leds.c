@@ -15,11 +15,8 @@
 void initLEDs(){
 
     //TODO: Initialize the appropriate pins to work with the LEDs
-    //TRISBbits.TRISB0 = ON;
-    //TRISBbits.TRISB1 = ON;
-    // This doesn the same thing as the above
-    // Sets the tristate bits for runLED and stopLED to 0, ON
-    TRISB = TRISB & 0b00;
+    TRISBbits.TRISB0 = ON;
+    TRISBbits.TRISB1 = ON;
     runLED = ON;
     stopLED = OFF;
     
