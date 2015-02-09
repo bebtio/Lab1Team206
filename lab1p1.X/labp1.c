@@ -24,21 +24,26 @@ _CONFIG2( IESO_OFF & SOSCSEL_SOSC & WUTSEL_LEG & FNOSC_PRIPLL & FCKSM_CSDCMD & O
 
 // ******************************************************************************************* //
 
+          volatile stateType fun;
 int main(void)
 {
 
+    initLEDs();
+    initTimer2();
+    initSW2();
 
-    nextState = run_led_state;
+    nextState = wait_for_press_state;
     while(1)
     {
         //TODO: Using a finite-state machine, define the behavior of the LEDs
         //Debounce the switch
         switch(nextState)
         {
-                case run_led_state: runLedState(); break;
-                case stop_led_state: stopLedState();break;
+                case wait_for_press_state: waitForPressState(); break;
                 case debounce_press_state: debouncePressState(); break;
+                case wait_for_release_state: waitForReleaseState(); break;
                 case debounce_release_state: debounceReleaseState(); break;
+                case toggle_leds: toggleLEDState(); break;
         }
     }
     
@@ -49,7 +54,17 @@ int main(void)
 
 void _ISR _CNInterrupt(void){
     //TODO: Implement the interrupt to capture the press of the button
+    IFS1bits.CNIF = DOWN;
+
+    if(BUTTON == PRESSED) { nextState = debounce_press_state;}
+    else {nextState = debounce_release_state;}
+    
 
 }
 
 /*********************************************************************************************/
+
+void _ISR _T2Interrupt(void)
+{
+
+}

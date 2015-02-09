@@ -14,6 +14,7 @@
 // Define the leds with names
 #define runLED LATBbits.LATB0
 #define stopLED LATBbits.LATB1
+#define BUTTON PORTBbits.RB4
 
 // Define ON and OFF
 #define ON   0
@@ -23,16 +24,21 @@
 #define DOWN 0
 #define UP   1
 
+// Define btton presses
+#define PRESSED 0
+#define RELEASED 1
+
 /*********************************************************************************************/
 
 // State variables
 typedef enum stateTypeEnum{
 
     // Define states by name
-    run_led_state = 1,
-    stop_led_state,
     debounce_press_state,
-    debounce_release_state
+    debounce_release_state,
+    wait_for_press_state,
+    wait_for_release_state,
+    toggle_leds
 
 } stateType;
 

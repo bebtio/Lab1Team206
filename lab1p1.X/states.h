@@ -8,10 +8,11 @@
 #ifndef STATES_H
 #define	STATES_H
 
-void runLedState();
-void stopLedState();
+void waitForPressState();
+void waitForReleaseState();
 void debouncePressState();
 void debounceReleaseState();
+void toggleLEDState();
 
 
 #endif	/* STATES_H */
