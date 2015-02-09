@@ -24,10 +24,8 @@ _CONFIG2( IESO_OFF & SOSCSEL_SOSC & WUTSEL_LEG & FNOSC_PRIPLL & FCKSM_CSDCMD & O
 
 // ******************************************************************************************* //
 
-          volatile stateType fun;
 int main(void)
 {
-
     initLEDs();
     initTimer2();
     initSW2();
@@ -58,8 +56,6 @@ void _ISR _CNInterrupt(void){
 
     if(BUTTON == PRESSED) { nextState = debounce_press_state;}
     else {nextState = debounce_release_state;}
-    
-
 }
 
 /*********************************************************************************************/
